@@ -4,12 +4,21 @@
 	$(document).ready(function () {
 		
 		/**-----------------------------
+		 *  Nice Select
+		 * ---------------------------*/
+		$('select').niceSelect();
+
+		/**-----------------------------
 		 *  Navbar fix
 		 * ---------------------------*/
 
-		$(document).on("click", "li.menu-item-has-children>a", function (e) {
+		$(document).on("click", ".navbars__hamburger", function (e) {
 			e.preventDefault();
+			$('.navbars__menu').addClass('active');
 		});
+		$('.navbars__cross').on('click', function() {
+			$('.navbars__menu').removeClass('active');
+		})
 		
 
 		// back to top

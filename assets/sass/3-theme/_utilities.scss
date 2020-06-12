@@ -1,0 +1,5 @@
+.t-w-lg-initial {
+    @include lg-screen {
+        width: initial !important;
+    }
+}

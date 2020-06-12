@@ -1,0 +1,19 @@
+.navbars__menu {
+	.nice-select {
+		padding-left: 0;
+		height: 30px;
+		line-height: 30px;
+		border-radius: initial;
+		background: transparent;
+		border: transparent;
+		color: white;
+		&::after {
+			border-bottom: 2px solid white;
+			border-right: 2px solid white;
+		}
+	}
+	.nice-select.open .list {
+		color: $secondary;
+	}
+}
+

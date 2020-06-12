@@ -1,0 +1,81 @@
+.navbars {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    background: $primary;
+    &__hamburger {
+        font-size: 20px;
+        line-height: 1;
+        color: $white;
+    }
+    &__menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: $primary;
+        transition: all .3s ease;
+        z-index: -9999;
+        opacity: 0;
+        &.active {
+            z-index: 9999;
+            opacity: 1;
+        }
+        @include lg-screen {
+            position: initial;
+            opacity: 1;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+    &__list {
+        @include lg-screen {
+            display: flex;
+        }
+        &-item {
+            margin-bottom: 8px;
+            @include md-screen {
+                margin-bottom: 16px;
+            }
+            @include lg-screen {
+                margin-bottom: 0;
+                margin-right: 16px;
+            }
+        }
+        &-link {
+            font-size: 20px;
+            letter-spacing: 1px;
+            @include md-screen {
+                font-size: 24px;
+                font-weight: 600;
+                letter-spacing: 2px;
+            }
+            @include lg-screen {
+                font-size: 14px;
+                font-weight: 500;
+                &:hover {
+                    color: $secondary !important;
+                }
+            }
+        }
+    }
+    &__cross {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        font-size: 30px;
+        color: $white;
+    }
+    &__current {
+        a {
+            color: $secondary;
+            &:hover {
+                color: $secondary;
+            }
+        }
+    }
+}

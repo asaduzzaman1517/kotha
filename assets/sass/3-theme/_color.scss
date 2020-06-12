@@ -1,0 +1,18 @@
+.t-text-light {
+    color: $white;
+}
+.t-link {
+    display: inline-block;
+    transition: all .3s ease;
+    
+    &:hover {
+        text-decoration: none;
+    }
+
+    &--light {
+        color: $white;
+        &:hover {
+            color: $white;
+        }
+    }
+}
