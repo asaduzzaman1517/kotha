@@ -1,0 +1,34 @@
+.tag {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: 1px;
+    &--skew {
+        transform: skewX(-5deg);
+    }
+    &__skew-reverse {
+        transform: skewX(5deg);
+        display: inline-block;
+    }
+    &-alpha {
+        background: $beta;
+    }
+    &-beta {
+        background: $gamma;
+    }
+    &-gamma {
+        background: $alpha;
+    }
+    &-delta {
+        background: $primary;
+    }
+    &-epsilon {
+        background: $delta;
+    }
+    &-zeta {
+        background: $epsilon;
+    }
+}

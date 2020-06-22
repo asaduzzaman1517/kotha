@@ -1,6 +1,9 @@
 .t-text-light {
     color: $white;
 }
+.t-text-primary {
+    color: $primary;
+}
 .t-link {
     display: inline-block;
     transition: all .3s ease;
@@ -13,6 +16,12 @@
         color: $white;
         &:hover {
             color: $white;
+        }
+    }
+    &--secondary {
+        color: $secondary;
+        &:hover {
+            color: $secondary;
         }
     }
 }

@@ -1,0 +1,38 @@
+.newsletter {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	padding-left: 15px;
+	padding-right: 15px;
+	background: $secondary;
+	@include lg-screen {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	&__input {
+		padding-top: 15px;
+		padding-bottom: 15px;
+		padding-left: 15px;
+		padding-right: 15px;
+		border: none;
+		background: rgba($white, 0.07);
+		color: $white;
+		&::placeholder {
+			font-size: 14px;
+			color: rgba($white, 0.5);
+			text-transform: capitalize;
+		}
+	}
+	&__button {
+		padding-top: 10px;
+		padding-bottom: 10px;
+		padding-left: 15px;
+		padding-right: 15px;
+		border: none;
+		transition: all 0.3s ease;
+        background: $primary;
+        font-family: $heading-font;
+        color: $white;
+        font-size: 18px;
+        text-transform: uppercase;
+	}
+}

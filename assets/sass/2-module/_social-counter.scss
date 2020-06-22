@@ -1,0 +1,42 @@
+.social-counter {
+    display: flex;
+    align-items: center;
+    &__icon {
+        display: inline-block;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        transform: skewX(-10deg);
+        &--be {
+            background: $be;
+        }
+        &--fb {
+            background: $fb;
+        }
+        &--tw {
+            background: $tw;
+        }
+        &--ins {
+            background: $ins;
+        }
+        &--in {
+            background: $in;
+        }
+        &-is {
+            display: inline-block;
+            transform: skewX(10deg);
+            font-size: 20px;
+            color: $white;
+        }
+    }
+    &__num {
+        display: block;
+        font-family: $heading-font;
+        color: $secondary;
+    }
+    &__follow {
+        display: block;
+        color: $secondary;
+    }
+}

@@ -2,11 +2,79 @@
 	"use strict";
 
 	$(document).ready(function () {
-		
+		/**-----------------------------
+		 *  Post Nav Menu
+		 * ---------------------------*/
+		$(document).on("click", ".post-nav__bar", function (e) {
+			e.preventDefault();
+			$(".post-nav__list").toggleClass("active");
+		});
+		/**-----------------------------
+		 *  News Scroll Slider
+		 * ---------------------------*/
+		let newsScroll = $(".news-scroll");
+		if (newsScroll.length) {
+			newsScroll.slick({
+				mobileFirst: true,
+				prevArrow:
+					'<button type="button" class="news-scroll__arrow news-scroll__prev"><span class="news-scroll__icon"><i class="las la-long-arrow-alt-left"></i></span></button>',
+				nextArrow:
+					'<button type="button" class="news-scroll__arrow news-scroll__next"><span class="news-scroll__icon"><i class="las la-long-arrow-alt-right"></i></span></button>',
+				responsive: [
+					{
+						breakpoint: 767,
+						settings: {
+							slidesToShow: 3,
+						},
+					},
+					{
+						breakpoint: 991,
+						settings: {
+							slidesToShow: 4,
+						},
+					},
+				],
+			});
+		}
+		/**-----------------------------
+		 *  Post Slider
+		 * ---------------------------*/
+		let postSlider = $(".post-slider");
+		if (postSlider.length) {
+			postSlider.slick({
+				mobileFirst: true,
+				autoplay: true,
+				autoplaySpeed: 300,
+				arrows: false,
+				speed: 4000,
+				fade: true,
+				responsive: [
+					{
+						breakpoint: 991,
+						settings: {
+							dots: true,
+						},
+					},
+				],
+			});
+		}
+		/**-----------------------------
+		 *  Breaking News Slider
+		 * ---------------------------*/
+		let breakingSlider = $(".breaking-news__headline-slider");
+		if (breakingSlider.length) {
+			breakingSlider.slick({
+				mobileFirst: true,
+				autoplay: true,
+				autoplaySpeed: 0,
+				arrows: false,
+				speed: 10000,
+			});
+		}
 		/**-----------------------------
 		 *  Nice Select
 		 * ---------------------------*/
-		$('select').niceSelect();
+		$("select").niceSelect();
 
 		/**-----------------------------
 		 *  Navbar fix
@@ -14,12 +82,11 @@
 
 		$(document).on("click", ".navbars__hamburger", function (e) {
 			e.preventDefault();
-			$('.navbars__menu').addClass('active');
+			$(".navbars__menu").addClass("active");
 		});
-		$('.navbars__cross').on('click', function() {
-			$('.navbars__menu').removeClass('active');
-		})
-		
+		$(".navbars__cross").on("click", function () {
+			$(".navbars__menu").removeClass("active");
+		});
 
 		// back to top
 		$(document).on("click", ".back-to-top", function () {
@@ -30,13 +97,10 @@
 				2000
 			);
 		});
-    });
-    
+	});
 })(jQuery);
 
-
 $(window).on("scroll", function () {
-
 	var ScrollTop = $(".back-to-top");
 	if ($(window).scrollTop() > 3000) {
 		ScrollTop.fadeIn(1000);
@@ -45,11 +109,10 @@ $(window).on("scroll", function () {
 	}
 });
 
-$(window).on('load', function() {
-
+$(window).on("load", function () {
 	/*-----------------
         preloader
     ------------------*/
 	var preLoder = $(".preloader");
 	preLoder.fadeOut(1000);
-})
+});
