@@ -8997,6 +8997,10 @@ textarea {
       .navbars__list-item {
         margin-bottom: 0;
         margin-right: 30px; } }
+    .navbars__list-item:hover {
+      color: #000c6c !important; }
+      .navbars__list-item:hover .navbars__list-link {
+        color: #000c6c !important; }
     .navbars__list-item-has-sub {
       position: relative;
       -webkit-transition: all .3s ease;

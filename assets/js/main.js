@@ -93,7 +93,7 @@
 		/**-----------------------------
 		 *  Navbar fix
 		 * ---------------------------*/
-		$('.navbars__list-link-has-sub').on('click', function(e){
+		$('.navbars__list-item-has-sub a').on('click', function(e){
 			e.preventDefault();
 		})
 		/**-----------------------------

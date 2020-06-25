@@ -46,10 +46,17 @@
                 margin-bottom: 0;
                 margin-right: 30px;
             }
+            &:hover {
+                color: $secondary !important;
+                .navbars__list-link {
+                    color: $secondary !important;
+                }
+            }
             &-has-sub {
                 position: relative;
                 transition: all .3s ease;
                 &:hover {
+                    
                     .sub-menu {
                         height: initial;
                         width: initial;
