@@ -24,4 +24,10 @@
             color: $secondary;
         }
     }
+    &--primary {
+        color: $primary;
+        &:hover {
+            color: $primary;
+        }
+    }
 }

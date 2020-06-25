@@ -3,6 +3,19 @@
 
 	$(document).ready(function () {
 		/**-----------------------------
+		 *  Post Slider Control Inside
+		 * ---------------------------*/
+		let incontrol = $(".post-slider-incontrol");
+		if (incontrol.length) {
+			incontrol.slick({
+				mobileFirst: true,
+				prevArrow:
+					'<button type="button" class="news-scroll__arrow news-scroll__prev"><span class="news-scroll__icon"><i class="las la-long-arrow-alt-left"></i></span></button>',
+				nextArrow:
+					'<button type="button" class="news-scroll__arrow news-scroll__next"><span class="news-scroll__icon"><i class="las la-long-arrow-alt-right"></i></span></button>',
+			});
+		}
+		/**-----------------------------
 		 *  Post Nav Menu
 		 * ---------------------------*/
 		$(document).on("click", ".post-nav__bar", function (e) {
@@ -76,8 +89,15 @@
 		 * ---------------------------*/
 		$("select").niceSelect();
 
+		
 		/**-----------------------------
 		 *  Navbar fix
+		 * ---------------------------*/
+		$('.navbars__list-link-has-sub').on('click', function(e){
+			e.preventDefault();
+		})
+		/**-----------------------------
+		 *  Hamburger Icon Click fix
 		 * ---------------------------*/
 
 		$(document).on("click", ".navbars__hamburger", function (e) {

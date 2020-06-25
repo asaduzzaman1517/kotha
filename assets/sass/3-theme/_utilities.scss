@@ -3,3 +3,12 @@
         width: initial !important;
     }
 }
+.t-minw-215 {
+    @include xl-screen {
+        min-width: 215px;
+    }
+}
+.t-h1 {
+    font-size: 3.75rem; 
+    line-height: 1;
+}

@@ -1,0 +1,8 @@
+.footer {
+    &-top {
+        border-bottom: 1px solid rgba(darken($white, 15%), .2);
+    }
+    &-mid {
+        border-bottom: 1px solid rgba(darken($white, 15%), .2);
+    }
+}

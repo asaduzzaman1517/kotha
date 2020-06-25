@@ -1,0 +1,59 @@
+.sub-menu {
+	height: 0;
+	width: 0;
+	opacity: 0;
+	z-index: -9999;
+	visibility: hidden;
+	border: 1px solid darken($primary, 8%);
+	background: darken($primary, 5%);
+	transition: all 0.3s ease;
+	@include lg-screen {
+		width: max-content;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        border: none;
+        background: darken($white, 5%);
+	}
+	&__link {
+        min-width: max-content;
+        width: 100%;
+		display: block;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		padding-left: 15px;
+		padding-right: 15px;
+        font-size: 14px;
+        color: $white !important;
+        &:hover {
+            color: $white !important;
+        }
+		@include md-screen {
+            font-size: 16px;
+            &:hover {
+                background: rgba($primary, .05);
+            }
+		}
+		@include lg-screen {
+			font-size: 14px;
+			padding-bottom: 10px;
+			padding-left: 10px;
+			padding-left: 60px;
+            padding-right: 60px;
+            color: $secondary !important;
+            &:hover {
+                color: $secondary !important;
+            }
+		}
+	}
+	&__item {
+        border-bottom: 1px solid darken($primary, 8%);
+        @include lg-screen {
+            border-bottom: 1px solid rgba(darken($white, 10%), .5);
+        }
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+}
