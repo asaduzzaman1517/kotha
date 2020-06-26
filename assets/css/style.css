@@ -9695,6 +9695,9 @@ textarea {
 .t-bg-secondary {
   background: #000639; }
 
+.t-bg-light {
+  background: #fff; }
+
 .t-bg-alpha {
   background: #fd7622; }
 

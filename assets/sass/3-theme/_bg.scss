@@ -1,6 +1,9 @@
 .t-bg-secondary {
     background: darken($secondary, 10%);
 }
+.t-bg-light {
+    background: $white;
+}
 .t-bg-alpha {
     background: $alpha;
 }
