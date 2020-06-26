@@ -8937,6 +8937,34 @@ textarea {
   padding-top: 16px;
   padding-bottom: 16px;
   background: #fe491a; }
+  .navbars--2 {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: -15px;
+    position: relative; }
+    .navbars--2::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -16px;
+      border-right: 8px solid #e43001;
+      border-left: 8px solid transparent;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid #e43001; }
+    .navbars--2::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -16px;
+      border-right: 8px solid transparent;
+      border-left: 8px solid #e43001;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid #e43001; }
+    .navbars--2 .brand {
+      width: 100%; }
+      @media screen and (min-width: 992px) {
+        .navbars--2 .brand {
+          width: auto; } }
   .navbars__hamburger {
     font-size: 20px;
     line-height: 1;
@@ -8961,9 +8989,9 @@ textarea {
     right: 0;
     bottom: 0;
     background: #fe491a;
-    -webkit-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
     z-index: -9999;
     opacity: 0; }
     .navbars__menu.active {
@@ -8986,9 +9014,9 @@ textarea {
       display: -ms-flexbox;
       display: flex; } }
   .navbars__list-item {
-    -webkit-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
     margin-bottom: 8px; }
     @media screen and (min-width: 768px) {
       .navbars__list-item {
@@ -9003,9 +9031,9 @@ textarea {
         color: #000c6c !important; }
     .navbars__list-item-has-sub {
       position: relative;
-      -webkit-transition: all .3s ease;
-      -o-transition: all .3s ease;
-      transition: all .3s ease; }
+      -webkit-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
       .navbars__list-item-has-sub:hover .sub-menu {
         height: initial;
         width: initial;
@@ -9015,7 +9043,7 @@ textarea {
       .navbars__list-item-has-sub:hover::after {
         opacity: 0; }
       .navbars__list-item-has-sub::after {
-        content: '';
+        content: "";
         width: 5px;
         height: 5px;
         position: absolute;
@@ -9027,9 +9055,9 @@ textarea {
         line-height: 5px;
         border-radius: 100%;
         background: white;
-        -webkit-transition: all .3s ease;
-        -o-transition: all .3s ease;
-        transition: all .3s ease; }
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease; }
   .navbars__list-link {
     font-size: 20px;
     letter-spacing: 1px; }
@@ -9357,8 +9385,8 @@ textarea {
       padding-left: 30px;
       padding-right: 30px; } }
   .newsletter__input {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 12px;
+    padding-bottom: 12px;
     padding-left: 15px;
     padding-right: 15px;
     border: none;
@@ -9600,8 +9628,14 @@ textarea {
 /*---------------------------------------
     3.3 Padding
 -----------------------------------------*/
+.t-pr-15 {
+  padding-right: 15px; }
+
 .t-pr-30 {
-  padding-left: 30px; }
+  padding-right: 30px; }
+
+.t-pl-15 {
+  padding-left: 15px; }
 
 .t-pl-30 {
   padding-left: 30px; }
@@ -9611,6 +9645,9 @@ textarea {
 
 .t-pb-40 {
   padding-bottom: 40px; }
+
+.t-pb-45 {
+  padding-bottom: 45px; }
 
 .t-pb-60 {
   padding-bottom: 60px; }
@@ -9648,11 +9685,33 @@ textarea {
   font-size: 3.75rem;
   line-height: 1; }
 
+@media screen and (min-width: 992px) {
+  .t-mr-lg-60 {
+    margin-right: 60px; } }
+
 /*---------------------------------------
     3.5 Bg
 -----------------------------------------*/
 .t-bg-secondary {
-  background: #000c6c; }
+  background: #000639; }
+
+.t-bg-alpha {
+  background: #fd7622; }
+
+.t-bg-beta {
+  background: #da1793; }
+
+.t-bg-gamma {
+  background: #007bff; }
+
+.t-bg-delta {
+  background: #8dc63f; }
+
+.t-bg-epsilon {
+  background: #ffae00; }
+
+.t-bg-zeta {
+  background: #30cfd0; }
 
 /*---------------------------------------
     0.4 Layout Style

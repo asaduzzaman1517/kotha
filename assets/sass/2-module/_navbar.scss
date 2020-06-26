@@ -1,119 +1,149 @@
 .navbars {
-    padding-top: 16px;
-    padding-bottom: 16px;
-    background: $primary;
-    &__hamburger {
-        font-size: 20px;
-        line-height: 1;
-        color: $white;
-    }
-    &__menu {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: $primary;
-        transition: all .3s ease;
-        z-index: -9999;
-        opacity: 0;
-        &.active {
-            z-index: 9999;
-            opacity: 1;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	background: $primary;
+	&--2 {
+		padding-left: 15px;
+		padding-right: 15px;
+        margin-top: -15px;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -16px;
+            border-right: 8px solid darken($primary, 10%);
+            border-left: 8px solid transparent;
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid darken($primary, 10%);
         }
-        @include lg-screen {
-            position: initial;
-            opacity: 1;
-            flex-direction: row;
-            justify-content: space-between;
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -16px;
+            border-right: 8px solid transparent;
+            border-left: 8px solid darken($primary, 10%);
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid darken($primary, 10%);
         }
-    }
-    &__list {
-        @include lg-screen {
-            display: flex;
-        }
-        &-item {
-            transition: all .3s ease;
-            margin-bottom: 8px;
-            @include md-screen {
-                margin-bottom: 16px;
-            }
-            @include lg-screen {
-                margin-bottom: 0;
-                margin-right: 30px;
-            }
-            &:hover {
-                color: $secondary !important;
-                .navbars__list-link {
-                    color: $secondary !important;
-                }
-            }
-            &-has-sub {
-                position: relative;
-                transition: all .3s ease;
-                &:hover {
-                    
-                    .sub-menu {
-                        height: initial;
-                        width: initial;
-                        opacity: 1;
-                        z-index: 9999;
-                        visibility: visible;
-                    }
-                    &::after {
-                        opacity: 0;
-                    }
-                }
-                &::after {
-                    content: '';
-                    width: 5px;
-                    height: 5px;
-                    position: absolute;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    left: -10px;
-                    line-height: 5px;
-                    border-radius: 100%;
-                    background: white;
-                    transition: all .3s ease;
-                }
-            }
-        }
-        &-link {
-            font-size: 20px;
-            letter-spacing: 1px;
-            @include md-screen {
-                font-size: 24px;
-                font-weight: 600;
-                letter-spacing: 2px;
-            }
-            @include lg-screen {
-                font-size: 14px;
-                font-weight: 500;
-                &:hover {
-                    color: $secondary !important;
-                }
-            }
-            
-        }
-    }
-    &__cross {
-        position: absolute;
-        top: 30px;
-        right: 30px;
-        font-size: 30px;
-        color: $white;
-    }
-    &__current {
-        a {
-            color: $secondary;
-            &:hover {
-                color: $secondary;
-            }
-        }
-    }
+		.brand {
+			width: 100%;
+			@include lg-screen {
+				width: auto;
+			}
+		}
+	}
+	&__hamburger {
+		font-size: 20px;
+		line-height: 1;
+		color: $white;
+	}
+	&__menu {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: $primary;
+		transition: all 0.3s ease;
+		z-index: -9999;
+		opacity: 0;
+		&.active {
+			z-index: 9999;
+			opacity: 1;
+		}
+		@include lg-screen {
+			position: initial;
+			opacity: 1;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+	}
+	&__list {
+		@include lg-screen {
+			display: flex;
+		}
+		&-item {
+			transition: all 0.3s ease;
+			margin-bottom: 8px;
+			@include md-screen {
+				margin-bottom: 16px;
+			}
+			@include lg-screen {
+				margin-bottom: 0;
+				margin-right: 30px;
+			}
+			&:hover {
+				color: $secondary !important;
+				.navbars__list-link {
+					color: $secondary !important;
+				}
+			}
+			&-has-sub {
+				position: relative;
+				transition: all 0.3s ease;
+				&:hover {
+					.sub-menu {
+						height: initial;
+						width: initial;
+						opacity: 1;
+						z-index: 9999;
+						visibility: visible;
+					}
+					&::after {
+						opacity: 0;
+					}
+				}
+				&::after {
+					content: "";
+					width: 5px;
+					height: 5px;
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					left: -10px;
+					line-height: 5px;
+					border-radius: 100%;
+					background: white;
+					transition: all 0.3s ease;
+				}
+			}
+		}
+		&-link {
+			font-size: 20px;
+			letter-spacing: 1px;
+			@include md-screen {
+				font-size: 24px;
+				font-weight: 600;
+				letter-spacing: 2px;
+			}
+			@include lg-screen {
+				font-size: 14px;
+				font-weight: 500;
+				&:hover {
+					color: $secondary !important;
+				}
+			}
+		}
+	}
+	&__cross {
+		position: absolute;
+		top: 30px;
+		right: 30px;
+		font-size: 30px;
+		color: $white;
+	}
+	&__current {
+		a {
+			color: $secondary;
+			&:hover {
+				color: $secondary;
+			}
+		}
+	}
 }

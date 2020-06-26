@@ -12,3 +12,8 @@
     font-size: 3.75rem; 
     line-height: 1;
 }
+.t-mr-lg-60 {
+    @include lg-screen {
+        margin-right: 60px;
+    }
+}

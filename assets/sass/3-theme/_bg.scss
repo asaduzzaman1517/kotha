@@ -1,3 +1,21 @@
 .t-bg-secondary {
-    background: $secondary;
+    background: darken($secondary, 10%);
+}
+.t-bg-alpha {
+    background: $alpha;
+}
+.t-bg-beta {
+    background: $beta;
+}
+.t-bg-gamma {
+    background: $gamma;
+}
+.t-bg-delta {
+    background: $delta;
+}
+.t-bg-epsilon {
+    background: $epsilon;
+}
+.t-bg-zeta {
+    background: $zeta;
 }
