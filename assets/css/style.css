@@ -9554,6 +9554,19 @@ textarea {
       border-bottom: none; }
 
 /*---------------------------------------
+    2.18 Pagi Nav
+-----------------------------------------*/
+.pagi-nav li {
+  position: relative; }
+  .pagi-nav li::after {
+    content: '||';
+    position: absolute;
+    color: #fff;
+    right: -20px; }
+  .pagi-nav li:last-child::after {
+    content: none; }
+
+/*---------------------------------------
     0.3 Theme Style
 -----------------------------------------*/
 /*---------------------------------------
@@ -9572,6 +9585,8 @@ textarea {
   transition: all .3s ease; }
   .t-link:hover {
     text-decoration: none; }
+  .t-link:focus {
+    outline: none; }
   .t-link--light {
     color: #fff; }
     .t-link--light:hover {

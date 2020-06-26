@@ -1,0 +1,16 @@
+.pagi-nav {
+    li {
+        position: relative;
+        &::after {
+            content: '||';
+            position: absolute;
+            color: $white;
+            right: -20px;
+        }
+        &:last-child {
+            &::after {
+                content: none;
+            }
+        }
+    }
+}
