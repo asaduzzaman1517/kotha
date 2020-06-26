@@ -9584,7 +9584,7 @@ textarea {
       line-height: 1; } }
 
 /*---------------------------------------
-    2.20
+    2.20 Comments
 -----------------------------------------*/
 .st-comments {
   display: -webkit-box;
@@ -9678,6 +9678,68 @@ textarea {
     border-color: grey !important; }
 
 /*---------------------------------------
+    2.21 Google Map
+-----------------------------------------*/
+.g-map {
+  width: 100%;
+  height: 600px; }
+  .g-map__canvas {
+    width: 100%;
+    height: 100%; }
+  .g-map__frame {
+    width: 100%;
+    height: 100%; }
+
+/*---------------------------------------
+    2.22 Info Card
+-----------------------------------------*/
+.info-card {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-box-shadow: 0 0 20px rgba(0, 123, 255, 0.3);
+  box-shadow: 0 0 20px rgba(0, 123, 255, 0.3);
+  border-radius: 5px;
+  background: #fff; }
+  @media screen and (min-width: 1200px) {
+    .info-card {
+      padding-left: 40px;
+      padding-right: 40px; } }
+  .info-card:hover {
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); }
+    .info-card:hover .info-card__icon {
+      background: #fe491a; }
+      .info-card:hover .info-card__icon-is {
+        color: #fff; }
+  .info-card__icon {
+    width: 100px;
+    height: 100px;
+    border: 2px solid rgba(254, 73, 26, 0.5);
+    border-radius: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+    .info-card__icon-is {
+      display: inline-block;
+      font-size: 36px;
+      color: #fe491a;
+      line-height: 1; }
+
+/*---------------------------------------
     0.3 Theme Style
 -----------------------------------------*/
 /*---------------------------------------
@@ -9732,6 +9794,9 @@ textarea {
 .t-mt-30 {
   margin-top: 30px; }
 
+.t-mt-60 {
+  margin-top: 60px; }
+
 .t-mb-10 {
   margin-bottom: 10px; }
 
@@ -9743,6 +9808,9 @@ textarea {
 
 .t-mb-30 {
   margin-bottom: 30px; }
+
+.t-mb-60 {
+  margin-bottom: 60px; }
 
 .t-mb-70 {
   margin-bottom: 70px; }
@@ -9814,6 +9882,9 @@ textarea {
 @media screen and (min-width: 992px) {
   .t-mr-lg-60 {
     margin-right: 60px; } }
+
+.t-mt-m-60 {
+  margin-top: -60px; }
 
 /*---------------------------------------
     3.5 Bg
