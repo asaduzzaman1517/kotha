@@ -1,0 +1,16 @@
+.quotation {
+    position: relative;
+    @include md-screen {
+        &::after {
+            content: '\f10e';
+            position: absolute;
+            right: 30px;
+            bottom: 30px;
+            font-family: 'Line Awesome Free';
+            font-weight: 900;
+            font-size: 80px;
+            color: rgba($white, .3);
+            line-height: 1;
+        }
+    }
+}
