@@ -75,13 +75,10 @@
 		 *  Breaking News Slider
 		 * ---------------------------*/
 		let breakingSlider = $(".breaking-news__headline-slider");
-		if (breakingSlider.length) {
-			breakingSlider.slick({
-				mobileFirst: true,
-				autoplay: true,
-				autoplaySpeed: 0,
-				arrows: false,
-				speed: 10000,
+		
+		if(breakingSlider.length) {
+			breakingSlider.jConveyorTicker({
+				anim_duration:   200
 			});
 		}
 		/**-----------------------------
