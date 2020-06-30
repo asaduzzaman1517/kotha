@@ -8933,7 +8933,7 @@ html {
   font-size: 11px; }
   @media screen and (min-width: 768px) {
     html {
-      font-size: 13px; } }
+      font-size: 16px; } }
   @media screen and (min-width: 992px) {
     html {
       font-size: 14px; } }
@@ -9339,11 +9339,14 @@ textarea {
         -webkit-transform: skewX(-10deg);
         -ms-transform: skewX(-10deg);
         transform: skewX(-10deg); } }
-  .breaking-news__headline-slider {
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%); }
+  @media screen and (min-width: 768px) {
+    .breaking-news__headline-slider {
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%); } }
+  .breaking-news__headline-slider-item {
+    margin-right: 16px; }
 
 /*---------------------------------------
     2.10 Post
@@ -9359,7 +9362,23 @@ textarea {
     background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#000420));
     background: -webkit-linear-gradient(transparent, #000420);
     background: -o-linear-gradient(transparent, #000420);
-    background: linear-gradient(transparent, #000420); }
+    background: linear-gradient(transparent, #000420);
+    opacity: 0.5;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease; }
+    .post__overlay:hover {
+      opacity: 0.8;
+      background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(black));
+      background: -webkit-linear-gradient(transparent, black);
+      background: -o-linear-gradient(transparent, black);
+      background: linear-gradient(transparent, black); }
+  .post--in:hover .post__overlay {
+    opacity: 0.7;
+    background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(black));
+    background: -webkit-linear-gradient(transparent, black);
+    background: -o-linear-gradient(transparent, black);
+    background: linear-gradient(transparent, black); }
   .post--in-content {
     position: absolute;
     left: 15px;
@@ -9383,6 +9402,11 @@ textarea {
       font-size: 18px; }
     .post__title-xsm {
       font-size: 14px; }
+    .post__title-xmin {
+      font-size: 14px; }
+      @media screen and (min-width: 568px) {
+        .post__title-xmin {
+          font-size: 18px; } }
   .post-slider {
     position: relative; }
     .post-slider .slick-dots {
@@ -9422,7 +9446,7 @@ textarea {
       color: #000c6c; }
       .post-nav__bar:hover {
         color: #fe491a; }
-    .post-nav__list {
+    .post-nav__list.list-group {
       display: none;
       position: absolute;
       right: 0;
@@ -9434,15 +9458,19 @@ textarea {
       -o-transition: all 0.5s ease;
       transition: all 0.5s ease;
       z-index: -9999; }
-      .post-nav__list.active {
+      .post-nav__list.list-group.active {
         display: block;
         opacity: 1;
         z-index: 9999; }
       @media screen and (min-width: 992px) {
-        .post-nav__list {
+        .post-nav__list.list-group {
           display: -webkit-box;
           display: -ms-flexbox;
           display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+          flex-direction: row;
           opacity: 1;
           z-index: 1;
           border: none;
@@ -9459,14 +9487,22 @@ textarea {
         color: #fe491a; }
       @media screen and (min-width: 992px) {
         .post-nav__link {
-          padding-left: 0;
-          padding-right: 16px;
+          padding-left: 8px;
+          padding-right: 8px;
           padding-top: 0;
-          padding-bottom: 0; }
+          padding-bottom: 0;
+          background-color: transparent; }
           .post-nav__link:hover {
             background: none; } }
-      .post-nav__link-current {
-        color: #fe491a; }
+      .post-nav__link.active {
+        color: #fe491a;
+        background: transparent;
+        border-color: transparent; }
+      .post-nav__link.list-group-item {
+        border: 1px solid transparent; }
+      @media screen and (min-width: 992px) {
+        .post-nav__link--light {
+          color: #fff; } }
     .post-nav__item {
       border-bottom: 1px solid rgba(217, 217, 217, 0.5); }
       .post-nav__item:last-child {
@@ -9601,7 +9637,12 @@ textarea {
     font-family: "Oswald", sans-serif;
     color: #fff;
     font-size: 18px;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    border: 2px solid transparent; }
+    .newsletter__button:hover {
+      background: #fff;
+      border: 2px solid #fe491a;
+      color: #fe491a; }
 
 /*---------------------------------------
     2.15 Social Counter
@@ -9689,13 +9730,15 @@ textarea {
       width: -moz-max-content;
       width: max-content;
       position: absolute;
-      top: 100%;
+      top: 110%;
       left: 50%;
       -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
       transform: translateX(-50%);
       border: none;
-      background: #f2f2f2; } }
+      background: #fff;
+      -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); } }
   .sub-menu__link {
     min-width: -webkit-max-content;
     min-width: -moz-max-content;
@@ -9724,7 +9767,8 @@ textarea {
         padding-right: 60px;
         color: #000c6c !important; }
         .sub-menu__link:hover {
-          color: #000c6c !important; } }
+          color: #fff;
+          background: #fe491a; } }
   .sub-menu__item {
     border-bottom: 1px solid #ee3201; }
     @media screen and (min-width: 992px) {
@@ -10012,7 +10056,7 @@ textarea {
   .t-link--secondary {
     color: #000c6c; }
     .t-link--secondary:hover {
-      color: #000c6c; }
+      color: #fe491a; }
   .t-link--primary {
     color: #fe491a; }
     .t-link--primary:hover {

@@ -10,11 +10,12 @@
 	@include lg-screen {
 		width: max-content;
         position: absolute;
-        top: 100%;
+        top: 110%;
         left: 50%;
         transform: translateX(-50%);
         border: none;
-        background: darken($white, 5%);
+		background: $white;
+		box-shadow: 0 5px 15px rgba($black, .3);
 	}
 	&__link {
         min-width: max-content;
@@ -43,7 +44,8 @@
             padding-right: 60px;
             color: $secondary !important;
             &:hover {
-                color: $secondary !important;
+				color: $white;
+				background: $primary;
             }
 		}
 	}

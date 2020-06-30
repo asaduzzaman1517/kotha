@@ -21,6 +21,8 @@
 		$(document).on("click", ".post-nav__bar", function (e) {
 			e.preventDefault();
 			$(".post-nav__list").toggleClass("active");
+			$('.la-bars').toggleClass('d-none');
+			$('.la-times').toggleClass('d-none');
 		});
 		/**-----------------------------
 		 *  News Scroll Slider

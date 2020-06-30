@@ -44,10 +44,15 @@
 				background: $secondary;
 				transform: skewX(-10deg);
 			}
-        }
-        &-slider {
-            top: 50%;
-            transform: translateY(-50%);
-        }
+		}
+		&-slider {
+			@include md-screen {
+				top: 50%;
+				transform: translateY(-50%);
+			}
+			&-item {
+				margin-right: 16px;
+			}
+		}
 	}
 }

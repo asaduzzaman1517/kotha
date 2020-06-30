@@ -7,8 +7,23 @@
 		right: 0;
 		left: 0;
 		background: linear-gradient(transparent, darken($secondary, 15%));
+		opacity: 0.5;
+		transition: all 0.5s ease;
+		&:hover {
+			opacity: 0.8;
+			background: linear-gradient(transparent, darken($secondary, 25%));
+		}
 	}
 	&--in {
+		&:hover {
+			.post__overlay {
+				opacity: 0.7;
+				background: linear-gradient(
+					transparent,
+					darken($secondary, 25%)
+				);
+			}
+		}
 		&-content {
 			position: absolute;
 			left: 15px;
@@ -36,6 +51,12 @@
 		}
 		&-xsm {
 			font-size: 14px;
+		}
+		&-xmin {
+			font-size: 14px;
+			@include iphn-screen {
+				font-size: 18px;
+			}
 		}
 	}
 	&-slider {
@@ -88,7 +109,7 @@
 				color: $primary;
 			}
 		}
-		&__list {
+		&__list.list-group {
 			display: none;
 			position: absolute;
 			right: 0;
@@ -105,6 +126,7 @@
 			}
 			@include lg-screen {
 				display: flex;
+				flex-direction: row;
 				opacity: 1;
 				z-index: 1;
 				border: none;
@@ -123,16 +145,27 @@
 				color: $primary;
 			}
 			@include lg-screen {
-				padding-left: 0;
-				padding-right: 16px;
+				padding-left: 8px;
+				padding-right: 8px;
 				padding-top: 0;
 				padding-bottom: 0;
+				background-color: transparent;
 				&:hover {
 					background: none;
 				}
 			}
-			&-current {
+			&.active {
 				color: $primary;
+				background: transparent;
+				border-color: transparent;
+			}
+			&.list-group-item {
+				border: 1px solid transparent;
+			}
+			&--light {
+				@include lg-screen {
+					color: $white;
+				}
 			}
 		}
 		&__item {
@@ -144,8 +177,8 @@
 				border-bottom: none;
 			}
 		}
-    }
-    &--right {
-        display: flex;
-    }
+	}
+	&--right {
+		display: flex;
+	}
 }

@@ -33,6 +33,12 @@
         font-family: $heading-font;
         color: $white;
         font-size: 18px;
-        text-transform: uppercase;
+		text-transform: uppercase;
+		border: 2px solid transparent;
+		&:hover {
+			background: $white;
+			border: 2px solid $primary;
+			color: $primary;
+		}
 	}
 }

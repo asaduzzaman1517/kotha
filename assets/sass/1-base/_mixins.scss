@@ -15,7 +15,7 @@
 
 //Small Screen (min-width: 375)
 @mixin iphn-screen {
-    @media screen and (min-width: 375px) {
+    @media screen and (min-width: 568px) {
         @content;
     }
 }
