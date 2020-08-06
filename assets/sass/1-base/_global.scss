@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500&display=swap");
 
 
 
@@ -42,9 +42,9 @@ h4,
 h5 {
 	margin: 1.5rem 0 1rem;
 	font-family: $heading-font;
-	font-weight: 700;
 	line-height: 1.15;
 	color: $heading-text;
+	letter-spacing: .03rem;
 }
 
 h1 {
@@ -69,7 +69,6 @@ h5 {
 }
 h6 {
 	font-size: 18px;
-	font-weight: 700;
 }
 .ex-sm-text {
 	font-size: 12px;

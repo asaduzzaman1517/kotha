@@ -1,58 +1,61 @@
 .breaking-news {
-	&__is {
-		padding-top: 22px;
-		padding-bottom: 22px;
-		position: relative;
-		background: $primary;
-		@include md-screen {
-			&::after {
-				content: "";
-				width: 15px;
-				position: absolute;
-				top: 0;
-				bottom: 0;
-				right: -8px;
-				background: $alpha;
-				transform: skewX(-10deg);
-			}
-		}
+    &__is {
+        padding-top: 22px;
+        padding-bottom: 22px;
+        position: relative;
+        background: $primary;
+        @include md-screen {
+            &::after {
+                content: "";
+                width: 15px;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: -8px;
+                background: $alpha;
+                transform: skewX(-10deg);
+            }
+        }
 
-		&-text {
-			display: inline-block;
-			font-family: $heading-font;
-			font-size: 30px;
-			line-height: 1;
-			color: $white;
-		}
-	}
-	&__headline {
-		height: 100%;
-		padding-left: 15px;
-		padding-right: 15px;
-		position: relative;
-		background: lighten($secondary, 10%);
-		@include md-screen {
-			padding-left: 30px;
-			padding-right: 30px;
-			&::before {
-				content: "";
-				width: 15px;
-				position: absolute;
-				top: 0;
-				bottom: 0;
-				left: -8px;
-				background: lighten($secondary, 10%);
-				transform: skewX(-10deg);
-			}
-		}
-		&-slider {
-			@include md-screen {
-				top: 50%;
-				transform: translateY(-50%);
-			}
-			&-item {
-				margin-right: 16px;
-			}
-		}
-	}
+        &-text {
+            display: inline-block;
+            font-family: $heading-font;
+            font-size: 30px;
+            line-height: 1;
+            color: $white;
+        }
+    }
+    &__headline {
+		display: flex;
+		align-items: center;
+        height: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        position: relative;
+        background: lighten($secondary, 10%);
+        @include md-screen {
+            padding-left: 30px;
+            padding-right: 30px;
+            &::before {
+                content: "";
+                width: 15px;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: -8px;
+                background: lighten($secondary, 10%);
+                transform: skewX(-10deg);
+            }
+        }
+        &-slider {
+            
+            @include md-screen {
+                // top: 50%;
+                // transform: translateY(-50%);
+            }
+            &-item {
+                margin-right: 16px;
+            }
+        }
+    }
 }

@@ -62,7 +62,7 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500&display=swap");
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -15561,10 +15561,10 @@ h3,
 h4,
 h5 {
   margin: 1.5rem 0 1rem;
-  font-family: "Oswald", sans-serif;
-  font-weight: 700;
+  font-family: "Bebas Neue", cursive;
   line-height: 1.15;
-  color: #14213d; }
+  color: #14213d;
+  letter-spacing: .03rem; }
 
 h1 {
   margin-top: 0;
@@ -15583,8 +15583,7 @@ h5 {
   font-size: 22px; }
 
 h6 {
-  font-size: 18px;
-  font-weight: 700; }
+  font-size: 18px; }
 
 .ex-sm-text {
   font-size: 12px; }
@@ -15912,12 +15911,18 @@ textarea {
       transform: skewX(-10deg); } }
   .breaking-news__is-text {
     display: inline-block;
-    font-family: "Oswald", sans-serif;
+    font-family: "Bebas Neue", cursive;
     font-size: 30px;
     line-height: 1;
     color: #fff; }
 
 .breaking-news__headline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 100%;
   padding-left: 15px;
   padding-right: 15px;
@@ -15938,12 +15943,6 @@ textarea {
         -webkit-transform: skewX(-10deg);
         -ms-transform: skewX(-10deg);
         transform: skewX(-10deg); } }
-  @media screen and (min-width: 768px) {
-    .breaking-news__headline-slider {
-      top: 50%;
-      -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%); } }
   .breaking-news__headline-slider-item {
     margin-right: 16px; }
 
@@ -16013,7 +16012,7 @@ textarea {
             right: 30px;
             bottom: 60px; } }
   .post__title {
-    font-family: "Oswald", sans-serif; }
+    font-family: "Bebas Neue", cursive; }
     .post__title-sm {
       font-size: 18px; }
     .post__title-xsm {
@@ -16288,7 +16287,7 @@ textarea {
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
     background: #00b9f1;
-    font-family: "Oswald", sans-serif;
+    font-family: "Bebas Neue", cursive;
     color: #fff;
     font-size: 18px;
     text-transform: uppercase;
@@ -16336,7 +16335,7 @@ textarea {
       color: #fff; }
   .social-counter__num {
     display: block;
-    font-family: "Oswald", sans-serif;
+    font-family: "Bebas Neue", cursive;
     color: #14213d; }
   .social-counter__follow {
     display: block;
@@ -16346,12 +16345,21 @@ textarea {
     2.16 Category List
 -----------------------------------------*/
 .category-list__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding-top: 15px;
   padding-bottom: 15px;
   padding-right: 15px;
   padding-left: 15px;
   background: #332750;
-  font-family: "Oswald", sans-serif; }
+  font-family: "Bebas Neue", cursive; }
 
 /*---------------------------------------
     2.17 Footer
@@ -16731,6 +16739,9 @@ textarea {
 
 .t-mt-60 {
   margin-top: 60px; }
+
+.t-mb-5 {
+  margin-bottom: 5px; }
 
 .t-mb-10 {
   margin-bottom: 10px; }
