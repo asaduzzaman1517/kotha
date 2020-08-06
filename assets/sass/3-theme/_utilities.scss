@@ -20,3 +20,71 @@
 .t-mt-m-60 {
     margin-top: -60px;
 }
+.t-flex-100 {
+    flex: 100%;
+    max-width: 100%;
+}
+.t-md-40-lg-18 {
+    @include md-screen {
+        font-size: 40px;
+    }
+    @include lg-screen {
+        font-size: 18px;
+    }
+}
+.t-md-40-lg-22 {
+    @include md-screen {
+        font-size: 40px;
+    }
+    @include lg-screen {
+        font-size: 22px;
+    }
+}
+.t-md-24-lg-14 {
+    @include md-screen {
+        font-size: 24px;
+    }
+    @include lg-screen {
+        font-size: 14px;
+    }
+}
+.t-md-22-lg-18 {
+    @include md-screen {
+        font-size: 22px;
+    }
+    @include lg-screen {
+        font-size: 18px;
+    }
+}
+.t-md-30-lg-18 {
+    @include md-screen {
+        font-size: 30px;
+    }
+    @include lg-screen {
+        font-size: 18px;
+    }
+}
+.t-md-22-lg-1875 {
+    @include md-screen {
+        font-size: 22px;
+    }
+    @include lg-screen {
+        font-size: 1.875rem;
+    }
+}
+.t-md-34-lg-1875 {
+    @include md-screen {
+        font-size: 34px;
+    }
+    @include lg-screen {
+        font-size: 1.875rem;
+    }
+}
+.t-md-40-lg-1875 {
+    @include md-screen {
+        font-size: 40px;
+    }
+    @include lg-screen {
+        font-size: 1.875rem;
+    }
+}

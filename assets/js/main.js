@@ -10,9 +10,9 @@
 			incontrol.slick({
 				mobileFirst: true,
 				prevArrow:
-					'<button type="button" class="news-scroll__arrow news-scroll__prev"><span class="news-scroll__icon"><i class="las la-long-arrow-alt-left"></i></span></button>',
+					'<button type="button" class="news-scroll__arrow news-scroll__prev news-scroll__prev-zeta"><span class="news-scroll__icon"><i class="las la-long-arrow-alt-left"></i></span></button>',
 				nextArrow:
-					'<button type="button" class="news-scroll__arrow news-scroll__next"><span class="news-scroll__icon"><i class="las la-long-arrow-alt-right"></i></span></button>',
+					'<button type="button" class="news-scroll__arrow news-scroll__next news-scroll__next-zeta"><span class="news-scroll__icon"><i class="las la-long-arrow-alt-right"></i></span></button>',
 			});
 		}
 		/**-----------------------------
@@ -32,9 +32,9 @@
 			newsScroll.slick({
 				mobileFirst: true,
 				prevArrow:
-					'<button type="button" class="news-scroll__arrow news-scroll__prev"><span class="news-scroll__icon"><i class="las la-long-arrow-alt-left"></i></span></button>',
+					'<button type="button" class="news-scroll__arrow news-scroll__prev news-scroll__prev-delta"><span class="news-scroll__icon"><i class="las la-long-arrow-alt-left"></i></span></button>',
 				nextArrow:
-					'<button type="button" class="news-scroll__arrow news-scroll__next"><span class="news-scroll__icon"><i class="las la-long-arrow-alt-right"></i></span></button>',
+					'<button type="button" class="news-scroll__arrow news-scroll__next news-scroll__next-delta"><span class="news-scroll__icon"><i class="las la-long-arrow-alt-right"></i></span></button>',
 				responsive: [
 					{
 						breakpoint: 767,

@@ -14,16 +14,59 @@
         top: -60px;
         border: none;
         color: $white;
+        @include md-screen {
+            top: -70px;
+        }
+        @include lg-screen {
+            top: -60px;
+        }
+        @include xl-screen {
+            top: -55px;
+        }
     }
     &__icon {
         transform: skewX(10deg);
     }
     &__next {
         right: 0;
-        background: $primary;
+        &-alpha {
+            background: $alpha;
+        }
+        &-beta {
+            background: $beta;
+        }
+        &-gamma {
+            background: $gamma;
+        }
+        &-delta {
+            background: $delta;
+        }
+        &-epsilon {
+            background: $epsilon;
+        }
+        &-zeta {
+            background: $zeta;
+        }
     }
     &__prev {
         right: 40px;
-        background: darken($secondary, 10%);
+        &-alpha {
+            background: $alpha;
+        }
+        &-beta {
+            background: $beta;
+        }
+        &-gamma {
+            background: $gamma;
+        }
+        &-delta {
+            background: $delta;
+        }
+        &-epsilon {
+            background: $epsilon;
+        }
+        &-zeta {
+            background: $zeta;
+        }
     }
 }

@@ -16,10 +16,12 @@
 		border: none;
 		background: rgba($white, 0.09);
 		color: $white;
+		text-align: center;
 		&::placeholder {
 			font-size: 14px;
 			color: rgba($white, 0.5);
 			text-transform: capitalize;
+			text-align: center;
 		}
 	}
 	&__button {

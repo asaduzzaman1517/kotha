@@ -1,7 +1,7 @@
 .navbars {
 	padding-top: 16px;
 	padding-bottom: 16px;
-	background: linear-gradient(90deg, $primary , $alpha);
+	background: $secondary;
 	&--2 {
 		padding-left: 15px;
 		padding-right: 15px;
@@ -12,10 +12,10 @@
             position: absolute;
             top: 0;
             left: -16px;
-            border-right: 8px solid darken($primary, 10%);
+            border-right: 8px solid darken($secondary, 3%);
             border-left: 8px solid transparent;
             border-top: 8px solid transparent;
-            border-bottom: 8px solid darken($primary, 10%);
+            border-bottom: 8px solid darken($secondary, 3%);
         }
         &::after {
             content: '';
@@ -23,9 +23,9 @@
             top: 0;
             right: -16px;
             border-right: 8px solid transparent;
-            border-left: 8px solid darken($primary, 10%);
+            border-left: 8px solid darken($secondary, 3%);
             border-top: 8px solid transparent;
-            border-bottom: 8px solid darken($primary, 10%);
+            border-bottom: 8px solid darken($secondary, 3%);
         }
 		.brand {
 			width: 100%;
@@ -49,7 +49,7 @@
 		left: 0;
 		right: 0;
 		bottom: 0;
-		background: $primary;
+		background: $secondary;
 		transition: all 0.3s ease;
 		z-index: -9999;
 		opacity: 0;
@@ -80,9 +80,9 @@
 				margin-right: 30px;
 			}
 			&:hover {
-				color: $secondary !important;
+				color: $primary !important;
 				.navbars__list-link {
-					color: $secondary !important;
+					color: $primary !important;
 				}
 			}
 			&-has-sub {
@@ -107,7 +107,7 @@
 					position: absolute;
 					top: 50%;
 					transform: translateY(-50%);
-					left: -10px;
+					right: -10px;
 					line-height: 5px;
 					border-radius: 100%;
 					background: white;
@@ -127,7 +127,7 @@
 				font-size: 14px;
 				font-weight: 500;
 				&:hover {
-					color: $secondary !important;
+					color: $primary !important;
 				}
 			}
 		}
@@ -140,10 +140,15 @@
 		color: $white;
 	}
 	&__current {
+		&.navbars__list-item-has-sub {
+			&::after {
+				background: $primary;
+			}
+		}
 		a {
-			color: $secondary;
+			color: $primary;
 			&:hover {
-				color: $secondary;
+				color: $primary;
 			}
 		}
 	}

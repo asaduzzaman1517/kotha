@@ -14,21 +14,24 @@
         display: inline-block;
     }
     &-alpha {
-        background: $beta;
-    }
-    &-beta {
-        background: $gamma;
-    }
-    &-gamma {
         background: $alpha;
     }
-    &-delta {
-        background: $primary;
+    &-beta {
+        background: $beta;
     }
-    &-epsilon {
+    &-gamma {
+        background: $gamma;
+    }
+    &-delta {
         background: $delta;
     }
-    &-zeta {
+    &-epsilon {
         background: $epsilon;
+    }
+    &-zeta {
+        background: $zeta;
+    }
+    &-secondary {
+        background: $theta;
     }
 }
