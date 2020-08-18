@@ -25,7 +25,7 @@
     &--secondary {
         color: $secondary;
         &:hover {
-            color: lighten($secondary, 15%);
+            color: $delta;
         }
     }
     &--primary {

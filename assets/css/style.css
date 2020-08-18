@@ -15712,13 +15712,17 @@ textarea {
   padding-top: 16px;
   padding-bottom: 16px;
   background: #14213d; }
+  @media screen and (min-width: 992px) {
+    .navbars {
+      padding-top: 0;
+      padding-bottom: 0; } }
   .navbars--2 {
     padding-left: 15px;
     padding-right: 15px;
     margin-top: -15px;
     position: relative; }
     .navbars--2::before {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       left: -16px;
@@ -15727,7 +15731,7 @@ textarea {
       border-top: 8px solid transparent;
       border-bottom: 8px solid #101b31; }
     .navbars--2::after {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       right: -16px;
@@ -15800,7 +15804,7 @@ textarea {
     @media screen and (min-width: 992px) {
       .navbars__list-item {
         margin-bottom: 0;
-        margin-right: 30px; } }
+        margin-right: 50px; } }
     .navbars__list-item:hover {
       color: #00b9f1 !important; }
       .navbars__list-item:hover .navbars__list-link {
@@ -15819,18 +15823,17 @@ textarea {
       .navbars__list-item-has-sub:hover::after {
         opacity: 0; }
       .navbars__list-item-has-sub::after {
-        content: "";
-        width: 5px;
-        height: 5px;
+        content: "\f107";
+        font-family: "Line Awesome Free";
+        font-weight: 900;
+        color: #fff;
+        font-size: 14px;
         position: absolute;
         top: 50%;
         -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
-        right: -10px;
-        line-height: 5px;
-        border-radius: 100%;
-        background: white;
+        right: -18px;
         -webkit-transition: all 0.3s ease;
         -o-transition: all 0.3s ease;
         transition: all 0.3s ease; }
@@ -15839,11 +15842,12 @@ textarea {
     letter-spacing: 1px; }
     @media screen and (min-width: 768px) {
       .navbars__list-link {
-        font-size: 24px;
         font-weight: 600;
         letter-spacing: 2px; } }
     @media screen and (min-width: 992px) {
       .navbars__list-link {
+        padding-top: 15px;
+        padding-bottom: 15px;
         font-size: 14px;
         font-weight: 500; }
         .navbars__list-link:hover {
@@ -15855,7 +15859,7 @@ textarea {
     font-size: 30px;
     color: #fff; }
   .navbars__current.navbars__list-item-has-sub::after {
-    background: #00b9f1; }
+    color: #00b9f1; }
   .navbars__current a {
     color: #00b9f1; }
     .navbars__current a:hover {
@@ -16390,7 +16394,7 @@ textarea {
       min-width: -moz-max-content;
       min-width: max-content;
       position: absolute;
-      top: 110%;
+      top: 100%;
       left: 50%;
       -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
@@ -16710,7 +16714,7 @@ textarea {
   .t-link--secondary {
     color: #14213d; }
     .t-link--secondary:hover {
-      color: #274077; }
+      color: #4c7eeb; }
   .t-link--primary {
     color: #00b9f1; }
     .t-link--primary:hover {
